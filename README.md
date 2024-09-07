@@ -22,7 +22,7 @@ DAISY addresses several United Nations Sustainable Development Goals (SDGs), inc
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/daisy.git
+    git clone https://github.com/Olibirds69/cc17-3k-daisy-developers.git
     ```
 2. Open the project in Android Studio.
 3. Sync Gradle and build the project.
