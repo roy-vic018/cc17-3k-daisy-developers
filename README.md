@@ -32,10 +32,6 @@ DAISY addresses several United Nations Sustainable Development Goals (SDGs), inc
 
 Contributions are welcome! Feel free to open a pull request or file an issue to report bugs or suggest improvements.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 You can modify it further to fit the specifics of your project repository!
