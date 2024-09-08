@@ -28,10 +28,3 @@ DAISY addresses several United Nations Sustainable Development Goals (SDGs), inc
 3. Sync Gradle and build the project.
 4. Run the app on an emulator or a physical device.
 
-## Contributions
-
-Contributions are welcome! Feel free to open a pull request or file an issue to report bugs or suggest improvements.
-
----
-
-You can modify it further to fit the specifics of your project repository!
