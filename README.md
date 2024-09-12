@@ -7,7 +7,7 @@ DAISY is a mobile application designed to enhance accessibility for People With 
 - **Sign Language Translator:** Converts spoken language into sign language.
 - **Voice Guidance:** Assists visually impaired users with voice navigation.
 - **Money Detection:** Identifies and reads out money denominations for the visually impaired.
-- **Mileage System:** Tracks service usage to offer rewards and benefits.
+- **Navigation Assistant:** Assists in Navigating and providing real-time route guidance providing optimal paths toward their destination.
 - **PWD Database:** Manages PWD profiles for better access to services.
 
 ## SDG Alignment
