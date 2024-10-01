@@ -57,18 +57,32 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        if (firebaseAuth.currentUser != null) {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        // Get the current user
+        val currentUser = firebaseAuth.currentUser
 
-
-        fun signUpClick(view: View) {
-            val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
-            Toast.makeText(this, "Create Account", Toast.LENGTH_SHORT).show()
-
-
+        // Check if the user is signed in
+        if (currentUser != null) {
+            // Reload the user state to ensure it's not a deleted account
+            currentUser.reload().addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    if (firebaseAuth.currentUser != null) {
+                        // If the user still exists, go to MainActivity
+                        val intent = Intent(this, MainActivity::class.java)
+                        intent.flags =
+                            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                    } else {
+                        // If the user has been deleted, stay on the login screen
+                        Toast.makeText(
+                            this,
+                            "Account no longer exists, please sign in again.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                } else {
+                    Toast.makeText(this, "Error reloading user data", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 }
