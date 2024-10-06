@@ -2,21 +2,17 @@ package com.example.daisy
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import android.content.Intent
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+class DashboardActivity : AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.dashboard)
 
         // Initialize buttons
         val assistiveCommBtn: Button = findViewById(R.id.assistive_communication_btn)
@@ -32,26 +28,32 @@ class MainActivity : AppCompatActivity() {
         // Set onClickListeners for each button
         assistiveCommBtn.setOnClickListener {
             Toast.makeText(this, "Assistive Communication Selected", Toast.LENGTH_SHORT).show()
-            // Implement action
         }
         moneyDetectionBtn.setOnClickListener {
             Toast.makeText(this, "Money Detection Selected", Toast.LENGTH_SHORT).show()
-            // Implement action
         }
 
         navigationAssistantBtn.setOnClickListener {
             Toast.makeText(this, "Navigation Assistant Selected", Toast.LENGTH_SHORT).show()
-            // Implement action
         }
 
         transportationBtn.setOnClickListener {
             Toast.makeText(this, "Transportation Selected", Toast.LENGTH_SHORT).show()
-            // Implement action
         }
 
         voiceCommandBtn.setOnClickListener {
             Toast.makeText(this, "Voice Command Activated", Toast.LENGTH_SHORT).show()
-            // Implement voice input functionality
+
+        emergencyBtn.setOnClickListener {
+            Toast.makeText(this, "Emergency", Toast.LENGTH_SHORT).show()
+        }
+
+         homeBtn.setOnClickListener {
+        }
+
+        settingsBtn.setOnClickListener {
+        }
+
         }
     }
 }

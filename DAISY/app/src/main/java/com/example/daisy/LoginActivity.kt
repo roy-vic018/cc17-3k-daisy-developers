@@ -2,16 +2,9 @@ package com.example.daisy
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Parcel
-import android.util.Log
-import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.daisy.databinding.ActivityLoginBinding
-import com.example.daisy.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -40,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, DashboardActivity::class.java)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
@@ -67,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     if (firebaseAuth.currentUser != null) {
                         // If the user still exists, go to MainActivity
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, DashboardActivity::class.java)
                         intent.flags =
                             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)
