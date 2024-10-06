@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
             currentUser.reload().addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     if (firebaseAuth.currentUser != null) {
-                        // If the user still exists, go to MainActivity
+                        // If the user still exists, go to DashBoardActivity
                         val intent = Intent(this, DashboardActivity::class.java)
                         intent.flags =
                             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
