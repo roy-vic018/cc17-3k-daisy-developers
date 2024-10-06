@@ -48,8 +48,10 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.androidx.gridlayout)
-    implementation("com.google.android.gms:play-services-maps:19.0.0")
+    implementation(libs.google.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
 }

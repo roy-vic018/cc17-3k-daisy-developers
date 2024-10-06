@@ -1,29 +1,32 @@
 package com.example.daisy
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.daisy.databinding.DashboardBinding // Import your generated binding class
 
 class DashboardActivity : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId", "WrongViewCast")
+    private lateinit var binding: DashboardBinding // Declare the binding variable
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.dashboard)
 
-        // Initialize buttons
-        val assistiveCommBtn: Button = findViewById(R.id.assistive_communication_btn)
-        val moneyDetectionBtn: Button = findViewById(R.id.money_detection_btn)
-        val navigationAssistantBtn: Button = findViewById(R.id.navigation_assistant_btn)
-        val transportationBtn: Button = findViewById(R.id.transportation_btn)
-        val voiceCommandBtn: Button = findViewById(R.id.voice_btn)
+        binding = DashboardBinding.inflate(layoutInflater) // Inflate the binding
+        setContentView(binding.root) // Set the content view to the root of the binding
 
-        val emergencyBtn: ImageButton = findViewById(R.id.emergency_btn)
-        val homeBtn: ImageButton = findViewById(R.id.home_btn)
-        val settingsBtn: ImageButton = findViewById(R.id.settings_btn)
+        // Initialize buttons using binding
+        val assistiveCommBtn: Button = binding.assistiveCommunicationBtn
+        val moneyDetectionBtn: Button = binding.moneyDetectionBtn
+        val navigationAssistantBtn: Button = binding.navigationAssistantBtn
+        val transportationBtn: Button = binding.transportationBtn
+//        val voiceCommandBtn: Button = binding.voiceBtn
+//        val emergencyBtn: ImageButton = binding.emergencyBtn
+//        val homeBtn: ImageButton = binding.homeBtn
+//        val settingsBtn: ImageButton = binding.settingsBtn
 
         // Set onClickListeners for each button
         assistiveCommBtn.setOnClickListener {
@@ -32,29 +35,23 @@ class DashboardActivity : AppCompatActivity() {
         moneyDetectionBtn.setOnClickListener {
             Toast.makeText(this, "Money Detection Selected", Toast.LENGTH_SHORT).show()
         }
-
         navigationAssistantBtn.setOnClickListener {
             Toast.makeText(this, "Navigation Assistant Selected", Toast.LENGTH_SHORT).show()
         }
-
         transportationBtn.setOnClickListener {
             Toast.makeText(this, "Transportation Selected", Toast.LENGTH_SHORT).show()
         }
-
-        voiceCommandBtn.setOnClickListener {
-            Toast.makeText(this, "Voice Command Activated", Toast.LENGTH_SHORT).show()
-
-        emergencyBtn.setOnClickListener {
-            Toast.makeText(this, "Emergency", Toast.LENGTH_SHORT).show()
-        }
-
-         homeBtn.setOnClickListener {
-        }
-
-        settingsBtn.setOnClickListener {
-        }
-
-        }
+//        voiceCommandBtn.setOnClickListener {
+//            Toast.makeText(this, "Voice Command Activated", Toast.LENGTH_SHORT).show()
+//        }
+//        emergencyBtn.setOnClickListener {
+//            Toast.makeText(this, "Emergency", Toast.LENGTH_SHORT).show()
+//        }
+//        homeBtn.setOnClickListener {
+//            // Handle home button click
+//        }
+//        settingsBtn.setOnClickListener {
+//            // Handle settings button click
+//        }
     }
 }
-

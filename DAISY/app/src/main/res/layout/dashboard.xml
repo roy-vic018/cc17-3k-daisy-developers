@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
 
     <TextView
         android:id="@+id/app_name"
@@ -53,7 +54,7 @@
         android:shadowColor="#0F0000"
         android:shadowDx="2"
         android:shadowDy="2"
-        
+
         android:text="Assistive Communication"
         android:textAlignment="viewStart"
         android:textColor="#000000"
@@ -167,9 +168,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/transportation_btn"/>
-<!--        app:srcCompat="@drawable/voice_ic"-->
-<!--        tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />-->
+        app:layout_constraintTop_toBottomOf="@+id/transportation_btn"
+        app:srcCompat="@drawable/voice_ic"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/BotNav"
@@ -236,6 +237,7 @@
         android:id="@+id/imageView"
         android:layout_width="412dp"
         android:layout_height="187dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toTopOf="@+id/assistive_communication_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
