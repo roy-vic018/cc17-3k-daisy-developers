@@ -151,7 +151,7 @@
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:srcCompat="@drawable/backspace_ic"
-        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds"
         tools:layout_editor_absoluteY="764dp" />
 
     <ImageButton
@@ -221,10 +221,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Tap to speak"
-        android:textColor="#C3B5B5"
+        android:textColor="#FFCDD2"
         app:layout_constraintBottom_toTopOf="@+id/imageButton4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
