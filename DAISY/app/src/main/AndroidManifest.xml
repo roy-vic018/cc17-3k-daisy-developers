@@ -35,8 +35,8 @@
         
 
         <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+            android:name="preloaded_fonts_list"
+            android:resource="@array/preloaded_fonts_array" />
     </application>
 
 </manifest>
