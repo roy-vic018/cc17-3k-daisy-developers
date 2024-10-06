@@ -1,92 +1,228 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2C6480"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:fontFamily="sans-serif-black"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/bruno_ace"
         android:text="DAISY"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
 
-    <!-- Money Detection Button -->
     <ImageView
         android:id="@+id/user_avatar"
         android:layout_width="56dp"
         android:layout_height="46dp"
-        android:layout_gravity="right"
-        android:layout_marginBottom="24dp"
+
         android:src="@drawable/ic_avatar"
+        app:layout_constraintBottom_toTopOf="@+id/assistive_communication_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925"
         tools:ignore="ContentDescription,RtlHardcoded" />
 
     <Button
         android:id="@+id/assistive_communication_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="14dp"
         android:backgroundTint="#7ED26C"
         android:drawableEnd="@drawable/ic_communication"
+        android:fontFamily="@font/rocknroll_one"
         android:insetLeft="12dp"
         android:insetRight="12dp"
         android:padding="16dp"
         android:text="Assistive Communication"
         android:textAlignment="viewStart"
         android:textColor="#000000"
-        tools:ignore="HardcodedText" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
 
-    <Button
-        android:id="@+id/money_detection_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFAB91"
-        android:drawableEnd="@drawable/ic_detect"
-        android:insetLeft="12dp"
-        android:insetRight="12dp"
-        android:padding="16dp"
-        android:text="Money Detection"
-        android:textAlignment="viewStart"
-        android:textColor="#000000"
-        tools:ignore="HardcodedText" />
-
-    <!-- Navigation Assistant Button -->
     <Button
         android:id="@+id/navigation_assistant_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
         android:backgroundTint="#C5E1A5"
         android:drawableEnd="@drawable/ic_navigation"
+        android:fontFamily="@font/rocknroll_one"
         android:insetLeft="12dp"
         android:insetRight="12dp"
         android:padding="16dp"
         android:text="Navigation Assistant"
         android:textAlignment="viewStart"
         android:textColor="#000000"
-        tools:ignore="HardcodedText" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/money_detection_btn"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
 
-    <!-- Transportation Button -->
     <Button
         android:id="@+id/transportation_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="14dp"
         android:backgroundTint="#FFF59D"
         android:drawableEnd="@drawable/ic_transportation"
+        android:fontFamily="@font/rocknroll_one"
         android:insetLeft="12dp"
         android:insetRight="12dp"
         android:padding="16dp"
         android:text="Transportation"
         android:textAlignment="viewStart"
         android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navigation_assistant_btn"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/money_detection_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="#FFAB91"
+        android:drawableEnd="@drawable/ic_detect"
+        android:fontFamily="@font/rocknroll_one"
+        android:insetLeft="12dp"
+        android:insetRight="12dp"
+        android:padding="16dp"
+        android:text="Money Detection"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assistive_communication_btn"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <!-- Navigation bar buttons -->
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="72dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/blue_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/mic_ic"
+        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="173dp" />
+
+    <ImageButton
+        android:id="@+id/backspace_Btn"
+        android:layout_width="36dp"
+        android:layout_height="38dp"
+        android:background="@drawable/blue_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:srcCompat="@drawable/backspace_ic"
+        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds"
+        tools:layout_editor_absoluteY="764dp" />
+
+    <ImageButton
+        android:id="@+id/voice_btn"
+        android:layout_width="66dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="168dp"
+        android:background="@drawable/blue_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportation_btn"
+        app:srcCompat="@drawable/voice_ic"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="412dp"
+        android:layout_height="60dp"
+        app:itemIconTint="@color/grey_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <ImageView
+            android:id="@+id/emergency_btn"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:srcCompat="@drawable/emergency_ic"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/home_btn"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:srcCompat="@drawable/home_ic"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/settings_btn"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:srcCompat="@drawable/setting_ic"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Tap to speak"
+        android:textColor="#FFCDD2"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
