@@ -88,4 +88,5 @@ class SignUpActivity() : AppCompatActivity(), Parcelable {
             Toast.makeText(this, "Signing In", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
