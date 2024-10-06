@@ -81,6 +81,7 @@ class SignUpActivity() : AppCompatActivity(), Parcelable {
                 Toast.makeText(this, "Empty Fields are not Allowed", Toast.LENGTH_SHORT).show()
             }
         }
+        // Button to go to SignUpActivity
         fun signInClick(view: View) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
