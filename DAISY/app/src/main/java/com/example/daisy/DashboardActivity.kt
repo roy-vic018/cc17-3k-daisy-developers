@@ -13,7 +13,7 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val moneyDetectionBtn: Button = findViewById(R.id.money_detection_btn)
         val navigationAssistantBtn: Button = findViewById(R.id.navigation_assistant_btn)
         val transportationBtn: Button = findViewById(R.id.transportation_btn)
-        val voiceCommandBtn: Button = findViewById(R.id.voice_command_btn)
+        val voiceCommandBtn: Button = findViewById(R.id.voice_btn)
 
         val emergencyBtn: ImageButton = findViewById(R.id.emergency_btn)
         val homeBtn: ImageButton = findViewById(R.id.home_btn)
