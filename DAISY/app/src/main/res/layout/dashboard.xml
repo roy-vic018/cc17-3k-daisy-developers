@@ -28,7 +28,6 @@
         android:id="@+id/user_avatar"
         android:layout_width="56dp"
         android:layout_height="46dp"
-
         android:layout_marginEnd="36dp"
         android:elevation="4dp"
         android:src="@drawable/ic_avatar"
@@ -54,7 +53,6 @@
         android:shadowColor="#0F0000"
         android:shadowDx="2"
         android:shadowDy="2"
-
         android:text="Assistive Communication"
         android:textAlignment="viewStart"
         android:textColor="#000000"
@@ -135,25 +133,31 @@
         tools:ignore="HardcodedText,VisualLintButtonSize" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/mic_btn"
         android:layout_width="72dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="156dp"
         android:background="@drawable/blue_background"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportation_btn"
+        app:layout_constraintVertical_bias="0.876"
         app:srcCompat="@drawable/mic_ic"
-        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="173dp" />
+        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/backspace_Btn"
         android:layout_width="36dp"
         android:layout_height="38dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="122dp"
         android:background="@drawable/blue_background"
+        app:layout_constraintBottom_toTopOf="@+id/BotNav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:srcCompat="@drawable/backspace_ic"
+        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds" />
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds"
         tools:layout_editor_absoluteY="764dp" />
 
@@ -174,49 +178,55 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/BotNav"
-        android:layout_width="412dp"
-        android:layout_height="60dp"
-        app:itemIconTint="@color/grey_blue"
+        android:layout_width="409dp"
+        android:layout_height="61dp"
+        android:foregroundTint="#572727"
+        app:itemIconTint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="VisualLintBounds">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/emergency_btn"
-            android:layout_width="92dp"
+            android:layout_width="89dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
+            android:background="@android:color/transparent"
             android:paddingStart="16dp"
-            android:paddingTop="8dp"
+            android:paddingTop="16dp"
             android:paddingEnd="8dp"
             android:paddingBottom="8dp"
             app:srcCompat="@drawable/emergency_ic"
-            tools:ignore="ContentDescription" />
+            app:tint="#0D47A1"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/home_btn"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:background="@android:color/transparent"
             android:paddingStart="8dp"
             android:paddingTop="8dp"
             android:paddingEnd="8dp"
             android:paddingBottom="8dp"
             app:srcCompat="@drawable/home_ic"
             app:tint="#0D47A1"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/settings_btn"
             android:layout_width="102dp"
             android:layout_height="match_parent"
             android:layout_gravity="end"
+            android:background="@android:color/transparent"
             android:paddingTop="8dp"
             android:paddingEnd="8dp"
             android:paddingBottom="8dp"
             app:srcCompat="@drawable/setting_ic"
-            tools:ignore="ContentDescription,RtlSymmetry" />
+            app:tint="#0D47A1"
+            tools:ignore="ContentDescription,RtlSymmetry,SpeakableTextPresentCheck" />
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
@@ -224,13 +234,14 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
         android:text="Tap to speak"
         android:textColor="#FFCDD2"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/mic_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportation_btn"
+        app:layout_constraintVertical_bias="0.92"
         tools:ignore="HardcodedText" />
 
     <ImageView
@@ -240,10 +251,11 @@
         android:contentDescription="TODO"
         app:layout_constraintBottom_toTopOf="@+id/assistive_communication_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/bg_view" />
+        app:srcCompat="@drawable/bg_view"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

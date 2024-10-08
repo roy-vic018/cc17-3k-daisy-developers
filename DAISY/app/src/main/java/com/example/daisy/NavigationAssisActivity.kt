@@ -41,7 +41,5 @@ class NavigationAssisActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap.uiSettings.isScrollGesturesEnabled = true
         googleMap.uiSettings.isScrollGesturesEnabledDuringRotateOrZoom = true
         googleMap.uiSettings.isIndoorLevelPickerEnabled = true
-
-
     }
 }
