@@ -14,7 +14,7 @@ constraintlayout = "2.1.4"
 googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.0.0"
 gridlayout = "1.0.0"
-playServicesMaps = "18.1.0"
+playServicesMaps = "19.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,10 +25,12 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+#noinspection SimilarGradleDependency
 google-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "googlemaps" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 androidx-gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
+#noinspection SimilarGradleDependency
 play-services-maps-v1810 = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 
 [plugins]

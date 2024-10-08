@@ -1,6 +1,7 @@
 package com.example.daisy
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,11 +13,11 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 
-class NavigationAssisActivity : AppCompatActivity(), OnMapReadyCallback {
+class NavigationAssistActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_navigation_assis)
+        setContentView(R.layout.activity_navigation_assist)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.map_fragment)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -24,8 +25,9 @@ class NavigationAssisActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as? SupportMapFragment
-
-        mapFragment?.getMapAsync(this)
+        mapFragment?.getMapAsync(this) ?: run{
+            Log.e("MapError", "Map Fragment not found!")
+        }
 
     }
 
