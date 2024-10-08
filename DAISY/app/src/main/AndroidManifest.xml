@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <!-- Add required permissions here -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -27,16 +34,28 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false">
+            android:exported="true">
         </activity>
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".NavigationAssistActivity"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"/>
-        
 
         <meta-data
             android:name="preloaded_fonts_list"
             android:resource="@array/preloaded_fonts_array" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBJm_dHDQyxruXYJfX7N4QDkP0OywrdaQk" />
+
     </application>
 
 </manifest>

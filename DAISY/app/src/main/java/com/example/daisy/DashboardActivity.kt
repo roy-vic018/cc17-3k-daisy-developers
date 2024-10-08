@@ -1,60 +1,60 @@
 package com.example.daisy
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.daisy.databinding.DashboardBinding
 
 class DashboardActivity : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId", "WrongViewCast")
+    private lateinit var binding: DashboardBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.dashboard)
 
-        // Initialize buttons
-        val assistiveCommBtn: Button = findViewById(R.id.assistive_communication_btn)
-        val moneyDetectionBtn: Button = findViewById(R.id.money_detection_btn)
-        val navigationAssistantBtn: Button = findViewById(R.id.navigation_assistant_btn)
-        val transportationBtn: Button = findViewById(R.id.transportation_btn)
-        val voiceCommandBtn: Button = findViewById(R.id.voice_btn)
+        // Inflate the layout using View Binding
+        binding = DashboardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val emergencyBtn: ImageButton = findViewById(R.id.emergency_btn)
-        val homeBtn: ImageButton = findViewById(R.id.home_btn)
-        val settingsBtn: ImageButton = findViewById(R.id.settings_btn)
 
-        // Set onClickListeners for each button
-        assistiveCommBtn.setOnClickListener {
+
+        //Navigation button
+        val navButton: Button = findViewById(R.id.navigation_assistant_btn)
+
+        // Set onClickListeners using the binding object
+        binding.assistiveCommunicationBtn.setOnClickListener {
             Toast.makeText(this, "Assistive Communication Selected", Toast.LENGTH_SHORT).show()
         }
-        moneyDetectionBtn.setOnClickListener {
+
+        binding.moneyDetectionBtn.setOnClickListener {
             Toast.makeText(this, "Money Detection Selected", Toast.LENGTH_SHORT).show()
         }
 
-        navigationAssistantBtn.setOnClickListener {
+        binding.navigationAssistantBtn.setOnClickListener {
             Toast.makeText(this, "Navigation Assistant Selected", Toast.LENGTH_SHORT).show()
+            // Start the NavigationAssistActivity
+            val intent = Intent(this, NavigationAssistActivity::class.java)
+            startActivity(intent)
         }
 
-        transportationBtn.setOnClickListener {
+        binding.transportationBtn.setOnClickListener {
             Toast.makeText(this, "Transportation Selected", Toast.LENGTH_SHORT).show()
         }
 
-        voiceCommandBtn.setOnClickListener {
+        binding.micBtn.setOnClickListener {
             Toast.makeText(this, "Voice Command Activated", Toast.LENGTH_SHORT).show()
+        }
 
-        emergencyBtn.setOnClickListener {
+        binding.emergencyBtn.setOnClickListener {
             Toast.makeText(this, "Emergency", Toast.LENGTH_SHORT).show()
         }
 
-         homeBtn.setOnClickListener {
+        binding.homeBtn.setOnClickListener {
         }
 
-        settingsBtn.setOnClickListener {
-        }
-
+        binding.settingsBtn.setOnClickListener {
         }
     }
 }
-

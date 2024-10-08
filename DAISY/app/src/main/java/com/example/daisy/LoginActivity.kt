@@ -2,6 +2,7 @@ package com.example.daisy
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.daisy.databinding.ActivityLoginBinding
@@ -59,7 +60,8 @@ class LoginActivity : AppCompatActivity() {
             currentUser.reload().addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     if (firebaseAuth.currentUser != null) {
-                        // If the user still exists, go to MainActivity
+                        // If the user still exists, go to DashBoardActivity
+                        Log.d("LoginActivity", "User exists: ${currentUser.email}")
                         val intent = Intent(this, DashboardActivity::class.java)
                         intent.flags =
                             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -76,6 +78,8 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Error reloading user data", Toast.LENGTH_SHORT).show()
                 }
             }
+        } else {
+            Log.d("LoginActivity", "No user logged in")
         }
     }
 }
