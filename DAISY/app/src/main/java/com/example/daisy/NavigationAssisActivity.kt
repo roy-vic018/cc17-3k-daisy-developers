@@ -32,7 +32,7 @@ class NavigationAssisActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
 
         val latLng = LatLng(16.4023, 120.5960)
-        googleMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18f))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18f))
 
         googleMap.uiSettings.isZoomControlsEnabled = true
         googleMap.uiSettings.isZoomGesturesEnabled = true
@@ -42,7 +42,5 @@ class NavigationAssisActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap.uiSettings.isScrollGesturesEnabled = true
         googleMap.uiSettings.isScrollGesturesEnabledDuringRotateOrZoom = true
         googleMap.uiSettings.isIndoorLevelPickerEnabled = true
-
-
     }
 }

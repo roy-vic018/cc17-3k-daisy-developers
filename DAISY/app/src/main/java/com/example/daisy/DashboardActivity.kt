@@ -19,8 +19,8 @@ class DashboardActivity : AppCompatActivity() {
         val moneyDetectionBtn: Button = findViewById(R.id.money_detection_btn)
         val navigationAssistantBtn: Button = findViewById(R.id.navigation_assistant_btn)
         val transportationBtn: Button = findViewById(R.id.transportation_btn)
-        val voiceCommandBtn: Button = findViewById(R.id.voice_btn)
-
+        val micBtn: ImageButton = findViewById(R.id.mic_btn)
+        val backspaceBtn: ImageButton = findViewById(R.id.backspace_Btn)
         val emergencyBtn: ImageButton = findViewById(R.id.emergency_btn)
         val homeBtn: ImageButton = findViewById(R.id.home_btn)
         val settingsBtn: ImageButton = findViewById(R.id.settings_btn)
@@ -41,20 +41,24 @@ class DashboardActivity : AppCompatActivity() {
             Toast.makeText(this, "Transportation Selected", Toast.LENGTH_SHORT).show()
         }
 
-        voiceCommandBtn.setOnClickListener {
-            Toast.makeText(this, "Voice Command Activated", Toast.LENGTH_SHORT).show()
+        micBtn.setOnClickListener {
+        }
+
+        backspaceBtn.setOnClickListener {
+        }
 
         emergencyBtn.setOnClickListener {
             Toast.makeText(this, "Emergency", Toast.LENGTH_SHORT).show()
         }
 
-         homeBtn.setOnClickListener {
+        homeBtn.setOnClickListener {
+            Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show()
         }
 
         settingsBtn.setOnClickListener {
+            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
         }
 
         }
     }
-}
 
