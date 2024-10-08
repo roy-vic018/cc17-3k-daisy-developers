@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg"
-    android:orientation="vertical"
-    tools:context=".DashboardActivity">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/app_name"
@@ -28,6 +27,7 @@
         android:id="@+id/user_avatar"
         android:layout_width="56dp"
         android:layout_height="46dp"
+
         android:layout_marginEnd="36dp"
         android:elevation="4dp"
         android:src="@drawable/ic_avatar"
@@ -158,23 +158,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/backspace_ic"
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds" />
-        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintBounds"
-        tools:layout_editor_absoluteY="764dp" />
-
-    <ImageButton
-        android:id="@+id/voice_btn"
-        android:layout_width="66dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="187dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="168dp"
-        android:background="@drawable/blue_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/transportation_btn"
-        app:srcCompat="@drawable/voice_ic"
-        tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/BotNav"
@@ -248,7 +231,6 @@
         android:id="@+id/imageView"
         android:layout_width="412dp"
         android:layout_height="187dp"
-        android:contentDescription="TODO"
         app:layout_constraintBottom_toTopOf="@+id/assistive_communication_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
