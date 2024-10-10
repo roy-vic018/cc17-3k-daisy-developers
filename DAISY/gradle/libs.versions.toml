@@ -1,5 +1,6 @@
 [versions]
 agp = "8.6.1"
+appcompatVersion = "1.4.0"
 kotlin = "1.9.0"
 mapsSecret = "2.0.1"
 coreKtx = "1.13.1"
@@ -18,6 +19,7 @@ playServicesMaps = "18.1.0"
 playSevicesMaps = "19.0.0"
 
 [libraries]
+androidx-appcompat-v140 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuth" }
 gms-play-sevices-maps = { module = "com.google.android.gms:play-sevices-maps", version.ref = "playSevicesMaps" }
