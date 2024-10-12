@@ -15,6 +15,7 @@ constraintlayout = "2.1.4"
 googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.0.0"
 gridlayout = "1.0.0"
+places = "4.0.0"
 playServicesMaps = "18.1.0"
 playSevicesMaps = "19.0.0"
 
@@ -33,6 +34,7 @@ google-maps = { group = "com.google.android.gms", name = "play-services-maps", v
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 androidx-gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
+places = { module = "com.google.android.libraries.places:places", version.ref = "places" }
 play-services-maps-v1810 = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 
 [plugins]
