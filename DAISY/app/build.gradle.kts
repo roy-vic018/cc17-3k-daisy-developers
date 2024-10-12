@@ -49,10 +49,10 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.androidx.gridlayout)
     implementation(libs.google.maps)
+    implementation("com.google.android.libraries.places:places:4.0.0")
+   // implementation("com.squareup.okhttp3:okhttp:4.9.3")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation (libs.androidx.appcompat.v140)
-
-
 }
